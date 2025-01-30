@@ -1,0 +1,16 @@
+import os
+os.system("cls" if os.name=="nt" else "clear")
+myfamily = ("mother", "father", "sister", "brother", "sister")
+print("Family members:", myfamily)
+print(f"The type of myfamily is: {type(myfamily)}")  
+print(f"First 'sister' (index 2): {myfamily[2]}")
+print(f"Second 'sister' (index 4): {myfamily[4]}")
+myfamily = myfamily + ("me",) 
+print("Family members after adding 'me':", myfamily)
+family_list = list(myfamily)  
+if "brother" in family_list:
+    family_list.remove("brother")  
+    myfamily = tuple(family_list) 
+    print("Family members after removing 'brother':", myfamily)
+else:
+    print("'brother' not found in the family.")
